@@ -30,7 +30,7 @@ const App = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault();
     if (!frontImage && !backImage) return;
-
+    
     const formData = new FormData();
     if (frontImage) {
       formData.append('front', frontImage);
@@ -45,7 +45,7 @@ const App = () => {
         },
       });
       setResult(response.data)
-      // console.log(response.data);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
